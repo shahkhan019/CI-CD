@@ -36,9 +36,9 @@ workflows:
     jobs:
       - print_hello
       - print_world:
-          filters:
-            branches:
-              only: /print_hello\/.*/
+          requires:
+            - print_hello
+
 
         
         
